@@ -30,7 +30,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-
         android:text="DIRECT.COM"
         android:textSize="24sp"
         android:id="@+id/DIRECT"
@@ -43,13 +42,14 @@
         app:srcCompat="@drawable/main2"
         android:scaleType="fitXY"
         />
+
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="155dp"
-        app:srcCompat="@drawable/main1"
-        android:id="@+id/imageView"
         android:layout_weight="0.22"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/main1" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,14 +60,7 @@
         android:ems="10"
         android:id="@+id/editText" />
 
-    <EditText
-        android:textAppearance="@color/Blue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:textColor="@color/Blue"
-        android:ems="10"
-        android:id="@+id/editText2" />
+
 
 
 </LinearLayout>
