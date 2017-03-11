@@ -61,6 +61,14 @@
         android:id="@+id/editText" />
 
 
+    <EditText
+        android:textAppearance="@color/Blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:textColor="@color/Blue"
+
+        android:id="@+id/editText2" />
 
 
 </LinearLayout>
