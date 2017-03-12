@@ -7,7 +7,7 @@ import store.IStock;
 public class Clothing extends Product {
 
 	public enum ClothType implements IStock{
-		TSHIRTS,JEANS,JACKETS,SWIMWEAR,HOODIES,BEACHWEAR;
+		TSHIRTS,JEANS,JACKETS,SWIMWEAR,HOODIES;
 	}
 	private ClothType clothType;
 	

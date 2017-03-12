@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SportsDirect</string>
+    <string name="man">MEN</string>
+    <string name="footwear">Footwear</string>
+    <string name="clothing">Clothing</string>
+    <string name="accessories">Accessories</string>
+    <string name="men_footwear">Mens Footwear</string>
+    <string name="running">Running</string>
+    <string name="flipflops">Flipflops</string>
+    <string name="boots">Boots</string>
+    <string name="sandals">Sandals</string>
+    <string name="football">Football</string>
+    <string name="men_clothing">Mens Clothing</string>
+    <string name="tshirt">Tshirts</string>
+    <string name="jeans">Jeans</string>
+    <string name="jacket">Jackets</string>
+    <string name="hoody">Hoodies</string>
+    <string name="swimwear">Swimwear</string>
+    <string name="selection">Make Your Selection</string>
+    <string name="lady">LADIES</string>
+
 </resources>
