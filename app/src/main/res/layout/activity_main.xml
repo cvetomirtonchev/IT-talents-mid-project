@@ -12,28 +12,40 @@
     android:weightSum="1">
 
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
 
     <TextView
 
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:textColorLink="@color/Blue"
-        android:text="SPORTS"
-        android:textSize="24sp"
-        android:id="@+id/sports" />
+    android:textColor="@color/colorPrimaryDark"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="serif"
 
+    android:textColorLink="@color/Blue"
+    android:text="SPORTS"
+    android:textSize="24sp"
+    android:id="@+id/sports" />
     <TextView
 
         android:textColor="@color/Red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="DIRECT.COM"
+
+        android:textColorLink="@color/Red"
+        android:text="DIRECT.com"
         android:textSize="24sp"
-        android:id="@+id/DIRECT"
-         />
+        android:id="@+id/direkt" />
+
+
+</LinearLayout>
+
+
+
 
 
     <ImageView
@@ -51,24 +63,49 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/main1" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Username "
-        android:textColor="@color/Blue"
-        android:ems="10"
-        android:id="@+id/editText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:textColor="@color/colorPrimaryDark"
+            android:ems="10"
+            android:id="@+id/editText" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:hint="Password" />
 
 
-    <EditText
-        android:textAppearance="@color/Blue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:textColor="@color/Blue"
+        <Button
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/login"
+            android:background="@color/White"
 
-        android:id="@+id/editText2" />
+
+            />
+        <Button
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/register"
+            android:background="@color/White"
+
+
+            />
+
+
+
+
+
+
+
 
 
 </LinearLayout>

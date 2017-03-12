@@ -18,5 +18,6 @@
     <string name="swimwear">Swimwear</string>
     <string name="selection">Make Your Selection</string>
     <string name="lady">LADIES</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 
 </resources>
