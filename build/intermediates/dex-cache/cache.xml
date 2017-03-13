@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vasko\.android\build-cache\751511d2c0fd953f154eeb7291964cc0568b00af\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="E:\Middle Project\SportsDirect-app\app\build\intermediates\pre-dexed\debug\classes_702c6efa1fea2c9535fd5d507ead38495acc2d3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vasko\.android\build-cache\e46944cc1e8f6dc14b84ce2771e12caaa8443550\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="E:\Middle Project\SportsDirect-app\app\build\intermediates\pre-dexed\debug\classes_a8effda319e400abb3517d2aa75b0c1b387bd2cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vasko\.android\build-cache\cf1947d378e23b311c52c5e631ab01f8edc70496\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="E:\Middle Project\SportsDirect-app\app\build\intermediates\pre-dexed\debug\classes_a5916ab853b8431615a7ae747d885d525ec4b96c.jar" />
+    </item>
+
+</items>

@@ -23,4 +23,9 @@ public class SelectionActivity extends AppCompatActivity {
         };
         ladiesChoice.setOnClickListener(listener);
     }
+
+    public void menChoice(View view) {
+        Intent intent = new Intent(this, MenActivity.class);
+        startActivity(intent);
+    }
 }

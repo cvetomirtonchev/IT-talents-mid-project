@@ -67,11 +67,11 @@
             android:id="@+id/ladies_footwear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ladiesfootwear"
             android:text="Footwear"
             android:textColor="@color/White"
-            android:layout_weight="1"
-            android:textSize="25sp"
-            android:background="@drawable/ladiesfootwear"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/ladies_clothing"
@@ -84,10 +84,6 @@
             android:textSize="25sp"
 
         />
-
-
-
-
 
     </LinearLayout>
     <LinearLayout
