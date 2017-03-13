@@ -9,143 +9,111 @@
     android:gravity="center_horizontal"
     android:background="@color/White"
     tools:context="tonchev.sportsdirect.MainActivity"
-    android:weightSum="1">
+    >
 
-    <TextView
-
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="verdana"
-        android:textColorLink="@color/Blue"
-        android:text="SPORTS"
-        android:textSize="24sp"
-        android:id="@+id/sports" />
-    <TextView
 
-        android:textColor="@color/Red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="verdana"
-        android:textColorLink="@color/Red"
-        android:text="DIRECT.com"
-        android:textSize="24sp"
-        android:id="@+id/direct" />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        />
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="verdana"
+            android:textColorLink="@color/Blue"
+            android:text="SPORTS"
+            android:textSize="24sp"
+            android:id="@+id/sports"
+            />
+        <TextView
+
+            android:textColor="@color/Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="verdana"
+            android:textColorLink="@color/Red"
+            android:text="DIRECT.com"
+            android:textSize="24sp"
+            android:id="@+id/direct" />
+
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LADIES"
-        android:textSize="35sp"/>
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        />
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/Black"
+        android:textSize="35sp" />
+</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="left">
-        <View
-            android:layout_width="50dp"
-            android:layout_height="1dp"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/footwear"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
-        <View
-            android:layout_width="60dp"
-            android:layout_height="1dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <Button
+            android:id="@+id/ladies_footwear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:text="Footwear"
-            android:textSize="20sp"/>
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:background="@drawable/ladiesfootwear"/>
 
-    </LinearLayout>
-    <View
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="right">
-
-        <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:background="@drawable/womanclothing"/>
-        <View
-            android:layout_width="50dp"
-            android:layout_height="1dp"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="horizontal">
-        <View
-            android:layout_width="60dp"
-            android:layout_height="1dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/ladies_clothing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="Clothing"
-            android:textSize="20sp"/>
-        <View
-            android:layout_width="60dp"
-            android:layout_height="1dp"
-            />
+            android:textColor="@color/White"
+            android:background="@drawable/ladiesclothing"
+            android:textSize="25sp"
 
-    </LinearLayout>
+        />
 
-    />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="left">
-        <View
-            android:layout_width="50dp"
-            android:layout_height="1dp"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/acces"/>
+
+
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
-        <View
-            android:layout_width="55dp"
-            android:layout_height="1dp"
+        <Button
+            android:id="@+id/ladies_accesories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ladiesaccesoaries"
+            android:text="@string/accesories"
+            android:textColor="@color/White"
+            android:textSize="30sp"
+
+
+
+
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Accesories"
-            android:textSize="20sp"/>
 
     </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>

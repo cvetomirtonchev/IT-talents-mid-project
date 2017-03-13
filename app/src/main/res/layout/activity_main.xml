@@ -9,96 +9,127 @@
     android:gravity="center_horizontal"
     android:background="@color/White"
     tools:context="tonchev.sportsdirect.MainActivity"
-    android:weightSum="1">
+    >
 
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-
-    <TextView
-
-    android:textColor="@color/colorPrimaryDark"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:fontFamily="serif"
-
-    android:textColorLink="@color/Blue"
-    android:text="SPORTS"
-    android:textSize="24sp"
-    android:id="@+id/sports" />
-    <TextView
-
-        android:textColor="@color/Red"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        android:textColorLink="@color/Red"
-        android:text="DIRECT.com"
-        android:textSize="24sp"
-        android:id="@+id/direkt" />
+
+        <TextView
+
+            android:id="@+id/sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+
+            android:text="SPORTS"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorLink="@color/Blue"
+            android:textSize="24sp" />
+
+        <TextView
+
+            android:id="@+id/direkt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+
+            android:text="DIRECT.com"
+            android:textColor="@color/Red"
+            android:textColorLink="@color/Red"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="0dp"
+    android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/main2"
+            />
+
+        <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/main1" />
+
+
+
 
 
 </LinearLayout>
 
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.5"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Username"
+        android:textColor="@color/colorPrimaryDark"
+        android:ems="10"
+        android:id="@+id/editText" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:background="@color/Blue"
+        android:text="Login"
 
 
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/register"
+        android:background="@color/White"
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        app:srcCompat="@drawable/main2"
-        android:scaleType="fitXY"
+
         />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="155dp"
-        android:layout_weight="0.22"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/main1" />
 
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Username"
-            android:textColor="@color/colorPrimaryDark"
-            android:ems="10"
-            android:id="@+id/editText" />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:hint="Password" />
 
 
-        <Button
-            android:layout_width="220sp"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:id="@+id/login"
-            android:background="@color/White"
 
 
-            />
-        <Button
-            android:layout_width="220sp"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:id="@+id/register"
-            android:background="@color/White"
 
-
-            />
+</LinearLayout>
 
 
 

@@ -11,3 +11,5 @@ public class LadiesClothing extends AppCompatActivity {
         setContentView(R.layout.activity_ladies_clothing);
     }
 }
+
+
