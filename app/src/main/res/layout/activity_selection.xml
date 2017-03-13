@@ -67,9 +67,9 @@
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:text="@string/man"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        android:onClick="menChoice"/>
 
     <Button
         android:id="@+id/ladiesButton"
