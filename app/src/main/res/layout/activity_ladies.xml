@@ -71,7 +71,8 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:textSize="25sp"
-            android:background="@drawable/ladiesfootwear"/>
+            android:background="@drawable/ladiesfootwear"
+        />
 
         <Button
             android:id="@+id/ladies_clothing"
