@@ -34,46 +34,48 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Username"
-        android:textColorHint="@color/White"
-        android:textColor="@color/White"
-        android:ems="10"
-        android:id="@+id/editText" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/White"
-        android:hint="e-mail"
-        android:textColor="@color/White"
-        android:ems="10"
-        android:id="@+id/email" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:textColorHint="@color/White"
-        android:id="@+id/pass1"
-        android:textColor="@color/White"
-        android:hint="Password"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:textColorHint="@color/White"
-        android:textColor="@color/White"
-        android:id="@+id/pass2"
-        android:hint="Repeat-Password"
-        />
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textColor="@color/White"
+            android:textColorHint="@color/White" />
+
+        <EditText
+            android:id="@+id/email_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="e-mail"
+            android:inputType="textPersonName"
+            android:textColor="@color/White"
+            android:textColorHint="@color/White" />
+
+        <EditText
+            android:id="@+id/pass1_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/White"
+            android:textColorHint="@color/White" />
+
+        <EditText
+            android:id="@+id/pass2_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Repeat-Password"
+            android:inputType="textPassword"
+            android:textColor="@color/White"
+            android:textColorHint="@color/White" />
 
     </LinearLayout>
 
@@ -88,7 +90,7 @@
         android:layout_width="220sp"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:id="@+id/register"
+        android:id="@+id/register_button"
         android:background="@color/White"
 
 

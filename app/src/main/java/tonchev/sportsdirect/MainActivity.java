@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
 
-    private static ArrayList<User> users = new ArrayList<>();
+    public static ArrayList<User> potrebiteli = new ArrayList<>();
 
     static {
         Store store = new Store("Sofia");
@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             gosho = new User("gosho","Gosho123", "Gosho123", "gosho@tuk.com", store);
-            users.add(gosho);
+            potrebiteli.add(gosho);
             atanas = new User("atanas","Atanas123", "Atanas123", "atanas@tuk.com", store);
-            users.add(atanas);
+            potrebiteli.add(atanas);
             pesho = new User("pesho","Pesho123", "Pesho123", "pesho@tuk.com", store);
-            users.add(pesho);
+            potrebiteli.add(pesho);
         }
         catch (User.InvalidEmailException e) {
             e.printStackTrace();
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
                 boolean inDatabase = false;
-                for (User u : users) {
+                for (User u : potrebiteli) {
                     if (user.equals(u.getUsername().toString()) && pass.equals(u.getPassword().toString())) {
                         Toast.makeText(MainActivity.this, "Successful Log-in!", Toast.LENGTH_SHORT).show();
                         inDatabase = true;
