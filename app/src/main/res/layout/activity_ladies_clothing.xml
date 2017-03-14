@@ -25,6 +25,7 @@
             android:text="SPORTS"
             android:textSize="24sp"
             android:id="@+id/sports"
+            android:inputType="textNoSuggestions"
             />
         <TextView
 
@@ -35,7 +36,8 @@
             android:textColorLink="@color/Red"
             android:text="DIRECT.com"
             android:textSize="24sp"
-            android:id="@+id/direct" />
+            android:id="@+id/direct"
+            android:inputType="textNoSuggestions"/>
 
     </LinearLayout>
     <LinearLayout
@@ -82,7 +84,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/ladiesswimwear"
-            android:text="Jackets"
+            android:text="Swimwear"
             android:textColor="@color/Black"
             android:textSize="20sp"/>
 

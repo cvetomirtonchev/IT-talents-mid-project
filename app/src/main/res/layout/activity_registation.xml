@@ -8,35 +8,44 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/White"
-    tools:context="tonchev.sportsdirect.MainActivity"
-    android:weightSum="1">
+    >
 
 
 
-    <TextView
-
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="verdana"
-        android:textColorLink="@color/Blue"
-        android:text="SPORTS"
-        android:textSize="24sp"
-        android:id="@+id/sports" />
-    <TextView
 
-        android:textColor="@color/Red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="verdana"
-        android:textColorLink="@color/Red"
-        android:text="DIRECT.com"
-        android:textSize="24sp"
-        android:id="@+id/direct" />
-    <View
-        android:layout_width="1dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="verdana"
+            android:textColorLink="@color/Blue"
+            android:text="SPORTS"
+            android:textSize="24sp"
+            android:id="@+id/sports" />
+        <TextView
+
+            android:textColor="@color/Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="verdana"
+            android:textColorLink="@color/Red"
+            android:text="DIRECT.com"
+            android:textSize="24sp"
+            android:id="@+id/direct" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"/>
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        android:gravity="center">
 
     <TextView
         android:id="@+id/textView3"
@@ -44,11 +53,14 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:textSize="30sp" />
+    </LinearLayout>
 
-    <View
-        android:layout_width="1dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"/>
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,12 +93,16 @@
         android:id="@+id/pass2"
         android:hint="Repeat-Password"
         />
-    <View
-        android:layout_width="1dp"
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"/>
+        android:layout_weight="0.4"
 
-
+        android:orientation="vertical"
+        android:gravity="center">
     <Button
         android:layout_width="220sp"
         android:layout_height="wrap_content"
@@ -97,6 +113,6 @@
 
         />
 
-
+    </LinearLayout>
 
 </LinearLayout>
