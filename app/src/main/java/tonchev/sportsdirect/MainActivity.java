@@ -5,6 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.TreeSet;
+
+import store.Store;
+import users.User;
 
 import static tonchev.sportsdirect.R.id.activity_main;
 
@@ -13,16 +19,19 @@ public class MainActivity extends AppCompatActivity {
     private Button loginButton;
     private Button registerButton;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loginButton = (Button) findViewById(R.id.login);
-        registerButton = (Button) findViewById(R.id.register) ;
+        registerButton = (Button) findViewById(R.id.register);
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SelectionActivity.class);
+                Intent intent = new Intent(MainActivity.this, SelectionActivity.class);
                 MainActivity.this.startActivity(intent);
 
             }
@@ -30,15 +39,19 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener registerListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,RegistationActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegistationActivity.class);
                 MainActivity.this.startActivity(intent);
 
             }
         };
         registerButton.setOnClickListener(registerListener);
-        loginButton.setOnClickListener(listener);
+        loginButton.setOnClickListener(listener);}
 
 
 
-    }
+
+
+
+
+
 }

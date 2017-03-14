@@ -7,43 +7,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@color/White"
+    android:background="@drawable/registerbackground"
     >
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:orientation="vertical"
-        android:gravity="center">
-        <TextView
-
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="verdana"
-            android:textColorLink="@color/Blue"
-            android:text="SPORTS"
-            android:textSize="24sp"
-            android:id="@+id/sports" />
-        <TextView
-
-            android:textColor="@color/Red"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="verdana"
-            android:textColorLink="@color/Red"
-            android:text="DIRECT.com"
-            android:textSize="24sp"
-            android:id="@+id/direct" />
-
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="0.7"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -52,7 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:textSize="30sp" />
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -66,15 +41,17 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="Username"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/White"
+        android:textColor="@color/White"
         android:ems="10"
         android:id="@+id/editText" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:textColorHint="@color/White"
         android:hint="e-mail"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/White"
         android:ems="10"
         android:id="@+id/email" />
     <EditText
@@ -82,7 +59,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:textColorHint="@color/White"
         android:id="@+id/pass1"
+        android:textColor="@color/White"
         android:hint="Password"
         />
     <EditText
@@ -90,6 +69,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:textColorHint="@color/White"
+        android:textColor="@color/White"
         android:id="@+id/pass2"
         android:hint="Repeat-Password"
         />
