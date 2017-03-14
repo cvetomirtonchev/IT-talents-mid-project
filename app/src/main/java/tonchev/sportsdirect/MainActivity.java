@@ -75,14 +75,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, SelectionActivity.class);
-                MainActivity.this.startActivity(intent);
+
 
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
                 boolean inDatabase = false;
                 for (User u : users) {
-                    if (user.equals(u.getUsername()) && pass.equals(u.getPassword())) {
+                    if (user.equals(u.getUsername().toString()) && pass.equals(u.getPassword().toString())) {
                         Toast.makeText(MainActivity.this, "Successful Log-in!", Toast.LENGTH_SHORT).show();
                         inDatabase = true;
                         Intent intent1 = new Intent(MainActivity.this,SelectionActivity.class);
