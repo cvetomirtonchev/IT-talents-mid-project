@@ -20,8 +20,8 @@
         <activity android:name=".MenClothingActivity" />
         <activity android:name=".SelectionActivity" />
         <activity android:name=".RegistationActivity" />
-        <activity android:name=".LadiesActivity" />
-        <activity android:name=".LadiesClothing"></activity>
+        <activity android:name=".LadiesClothing" />
+        <activity android:name=".LadiesActivity2"></activity>
     </application>
 
 </manifest>

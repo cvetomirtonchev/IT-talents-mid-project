@@ -17,7 +17,7 @@ public class SelectionActivity extends AppCompatActivity {
         final View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SelectionActivity.this,LadiesActivity.class);
+                Intent intent = new Intent(SelectionActivity.this,LadiesActivity2.class);
                 SelectionActivity.this.startActivity(intent);
             }
         };
