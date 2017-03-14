@@ -169,7 +169,12 @@ public class User {
 	public Store getStore() {
 		return store;
 	}
-	
-	
 
+	public String getUsername() {
+		return username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
 }
