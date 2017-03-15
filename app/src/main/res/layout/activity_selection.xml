@@ -78,11 +78,7 @@
         android:text="@string/lady"
         android:textSize="35sp"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/accessories"
-        android:textSize="35sp"/>
+
 
 </LinearLayout>
 

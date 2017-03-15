@@ -89,7 +89,8 @@
             android:text="@string/accessories"
             android:background="@drawable/watches"
             android:textSize="25sp"
-            android:textColor="@color/White"/>
+            android:textColor="@color/White"
+            android:id="@+id/acces_men"/>
 
 
     </LinearLayout>

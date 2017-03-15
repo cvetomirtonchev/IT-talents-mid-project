@@ -21,7 +21,9 @@
         <activity android:name=".SelectionActivity" />
         <activity android:name=".RegistationActivity" />
         <activity android:name=".LadiesClothing" />
-        <activity android:name=".LadiesActivity2"></activity>
+        <activity android:name=".LadiesActivity2" />
+        <activity android:name=".LadiesFootwear" />
+        <activity android:name=".Accesoaries"></activity>
     </application>
 
 </manifest>

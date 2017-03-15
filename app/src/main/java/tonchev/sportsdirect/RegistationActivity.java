@@ -45,6 +45,7 @@ public class RegistationActivity extends AppCompatActivity {
                     Toast.makeText(RegistationActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegistationActivity.this,MainActivity.class);
                     RegistationActivity.this.startActivity(intent);
+                    finish();
 
                 } catch (User.InvalidEmailException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid email address", Toast.LENGTH_SHORT).show();
@@ -52,8 +53,7 @@ public class RegistationActivity extends AppCompatActivity {
                     Toast.makeText(RegistationActivity.this, "Invalid username", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidPasswordException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(RegistationActivity.this, "Password"+password1.toString(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(RegistationActivity.this, "Password"+password2.toString(), Toast.LENGTH_SHORT).show();
+                   
                 }
             }
         });
