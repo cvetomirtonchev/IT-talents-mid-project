@@ -52,7 +52,7 @@ public class RegistationActivity extends AppCompatActivity {
                 } catch (User.InvalidUsernameException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid username", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidPasswordException e) {
-                    Toast.makeText(RegistationActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistationActivity.this, "Invalid password: password must contain Capital letter and a symbol!", Toast.LENGTH_SHORT).show();
                    
                 }
             }

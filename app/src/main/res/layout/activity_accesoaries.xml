@@ -23,7 +23,7 @@
             android:fontFamily="verdana"
             android:textColorLink="@color/Blue"
             android:text="SPORTS"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:id="@+id/sports"
             android:inputType="textNoSuggestions"
             />
@@ -35,7 +35,7 @@
             android:fontFamily="verdana"
             android:textColorLink="@color/Red"
             android:text="DIRECT.com"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:id="@+id/direct"
             android:inputType="textNoSuggestions"/>
 
@@ -51,16 +51,16 @@
             android:layout_weight="1"
             android:background="@drawable/acces"
             android:text="Whatches"
-            android:textColor="@color/Black"
-            android:textSize="20sp"/>/>
+            android:textColor="@color/White"
+            android:textSize="25sp"/>/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/belts"
             android:text="Belts"
-            android:textColor="@color/Black"
-            android:textSize="20sp"/>/>
+            android:textColor="@color/White"
+            android:textSize="25sp"/>/>
 
     </LinearLayout>
     <LinearLayout
@@ -76,8 +76,8 @@
             android:layout_weight="1"
             android:background="@drawable/hat"
             android:text="Hats"
-            android:textColor="@color/Black"
-            android:textSize="20sp"/>
+            android:textColor="@color/White"
+            android:textSize="25sp"/>
 
         <Button
             android:layout_width="0dp"
@@ -86,7 +86,7 @@
             android:background="@drawable/glases"
             android:text="Glasses"
             android:textColor="@color/Black"
-            android:textSize="20sp"/>
+            android:textSize="25sp"/>
 
     </LinearLayout>
 
