@@ -12,6 +12,7 @@ import store.Store;
 import users.User;
 
 import static tonchev.sportsdirect.MainActivity.potrebiteli;
+import static tonchev.sportsdirect.MainActivity.store;
 
 public class RegistationActivity extends AppCompatActivity {
     private Button registration ;
@@ -21,7 +22,7 @@ public class RegistationActivity extends AppCompatActivity {
     private EditText email;
 
     static {
-
+        final Store regStore = store;
     }
 
 
@@ -34,20 +35,19 @@ public class RegistationActivity extends AppCompatActivity {
         password1 = (EditText) findViewById(R.id.pass1_register);
         password2= (EditText) findViewById(R.id.pass2_register);
         email = (EditText) findViewById(R.id.email_register);
-        final Store store = new Store("Sofia");
+
 
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    potrebiteli.add(new User(username.toString(),password1.toString(),password2.toString(),email.toString(),store));
+                    potrebiteli.add(new User(username.getText().toString(),password1.getText().toString(),password2.getText().toString(),email.getText().toString(),store));
+                    Toast.makeText(RegistationActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegistationActivity.this,MainActivity.class);
                     RegistationActivity.this.startActivity(intent);
 
-
-
                 } catch (User.InvalidEmailException e) {
-                    Toast.makeText(RegistationActivity.this, "Invalid email adress", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistationActivity.this, "Invalid email address", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidUsernameException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid username", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidPasswordException e) {

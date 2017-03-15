@@ -6,17 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-
-import java.util.TreeSet;
-
-import store.Store;
-import users.User;
-
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
 
 import store.Store;
 import users.User;
@@ -27,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
     private Button registerButton;
     private EditText username;
     private EditText password;
-
+    public static Store store;
     public static ArrayList<User> potrebiteli = new ArrayList<>();
 
     static {
-        Store store = new Store("Sofia");
+        store = new Store("Sofia");
         User pesho;
         User gosho;
         User atanas;
