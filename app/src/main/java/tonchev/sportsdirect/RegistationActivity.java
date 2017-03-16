@@ -53,7 +53,7 @@ public class RegistationActivity extends AppCompatActivity {
                     Toast.makeText(RegistationActivity.this, "Invalid username", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidPasswordException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
-                   
+
                 }
             }
         });
