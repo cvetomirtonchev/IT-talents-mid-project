@@ -25,8 +25,13 @@ public class MenActivity extends AppCompatActivity {
 
     }
 
-    public void callFootwaer(View view) {
+    public void callFootwear(View view) {
         Intent intent = new Intent(this, MenFootwearActivity.class);
+        startActivity(intent);
+    }
+
+    public void callClothing (View view) {
+        Intent intent = new Intent(this, MenClothingActivity.class);
         startActivity(intent);
     }
 }

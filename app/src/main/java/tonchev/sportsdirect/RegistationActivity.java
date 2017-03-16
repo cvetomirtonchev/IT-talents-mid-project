@@ -43,8 +43,11 @@ public class RegistationActivity extends AppCompatActivity {
                 try {
                     potrebiteli.add(new User(username.getText().toString(),password1.getText().toString(),password2.getText().toString(),email.getText().toString(),store));
                     Toast.makeText(RegistationActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegistationActivity.this,MainActivity.class);
-                    RegistationActivity.this.startActivity(intent);
+                    Intent intent = new Intent();
+                    intent.putExtra("username",username.getText().toString());
+                    intent.putExtra("password",password1.getText().toString());
+
+                    setResult(1,intent);
                     finish();
 
                 } catch (User.InvalidEmailException e) {
@@ -52,10 +55,22 @@ public class RegistationActivity extends AppCompatActivity {
                 } catch (User.InvalidUsernameException e) {
                     Toast.makeText(RegistationActivity.this, "Invalid username", Toast.LENGTH_SHORT).show();
                 } catch (User.InvalidPasswordException e) {
-                    Toast.makeText(RegistationActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
+
+
+
+                    Toast.makeText(RegistationActivity.this, "Invalid password: password must contain Capital letter and a symbol!", Toast.LENGTH_SHORT).show();
 
                 }
             }
         });
     }
+
+
+
+
 }
+
+
+
+
+

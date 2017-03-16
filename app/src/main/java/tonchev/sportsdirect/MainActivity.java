@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         User pesho;
         User gosho;
         User atanas;
-
-
         try {
             gosho = new User("gosho","Gosho123", "Gosho123", "gosho@tuk.com", store);
             potrebiteli.add(gosho);
@@ -45,19 +43,12 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
 
         }
-
     }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loginButton = (Button) findViewById(R.id.login);
-
-
-
         registerButton = (Button) findViewById(R.id.register) ;
         username = (EditText) findViewById(R.id.loginusername);
         password = (EditText) findViewById(R.id.password);
@@ -66,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
 
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
@@ -82,29 +71,29 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 if (!inDatabase) {
-                    Toast.makeText(MainActivity.this, "You are not in the database! Please register first!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Incorrect username or password!", Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
         };
         View.OnClickListener registerListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegistationActivity.class);
-                MainActivity.this.startActivity(intent);
+                MainActivity.this.startActivityForResult(intent,1);
 
             }
         };
         registerButton.setOnClickListener(registerListener);
-        loginButton.setOnClickListener(listener);}
+        loginButton.setOnClickListener(listener);
+    }
 
-
-
-
-
-
-
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1){
+            if (data !=null){
+                username.setText(data.getStringExtra("username"));
+                password.setText(data.getStringExtra("password"));
+            }
+        }
+    }
 }
