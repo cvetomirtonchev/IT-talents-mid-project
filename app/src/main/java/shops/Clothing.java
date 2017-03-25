@@ -1,7 +1,5 @@
 package shops;
 
-import shops.Product.Gender;
-import shops.Product.ProductType;
 import store.IStock;
 
 public class Clothing extends Product {
@@ -16,6 +14,8 @@ public class Clothing extends Product {
 		this.clothType = clothType;
 		this.productType = ProductType.CLOTHING;
 		this.stock = clothType;
+
+
 
 	}
 	

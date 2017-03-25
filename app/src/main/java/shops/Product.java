@@ -1,28 +1,25 @@
 package shops;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Random;
-import java.util.Map.Entry;
-import java.util.TreeMap;
+import java.io.Serializable;
 
 import store.IStock;
 
 public abstract class Product  {
 
-	public enum Brand {
+	public enum Brand implements Serializable {
 		NIKE, ADIDAS, PUMA, EVERLAST
 	}
 
-	public enum Gender {
+	public enum Gender implements Serializable {
 		MEN, LADIES
 	}
 
-	public enum ProductType {
+	public enum ProductType implements Serializable{
 		FOOTWEAR, CLOTHING, ACCESSORIES
 	}
+	public static String[] menFootSizes = {"39", "40", "41", "42", "43", "44", "45", "46"};
+	public static String[] menClothSizes = {"S", "M", "L", "XL", "XXL"};
+	public static String[] accessSizes = {"S", "M", "L"};
 
 	private String name;
 	private Brand brand;

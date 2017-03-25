@@ -23,7 +23,8 @@
         <activity android:name=".LadiesClothing" />
         <activity android:name=".LadiesActivity2" />
         <activity android:name=".LadiesFootwear" />
-        <activity android:name=".Accesoaries"></activity>
+        <activity android:name=".Accesoaries" />
+        <activity android:name=".ProductsActivity"></activity>
     </application>
 
 </manifest>

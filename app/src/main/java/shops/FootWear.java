@@ -1,15 +1,12 @@
 package shops;
 
-import java.util.TreeMap;
-import java.util.Map.Entry;
-import java.util.Random;
+import java.io.Serializable;
 
-import shops.Product.Gender;
 import store.IStock;
 
 public class FootWear extends Product {
 
-	public enum ShoesType implements IStock{
+	public enum ShoesType implements IStock, Serializable{
 	RUNNIG,BOOTS,SANDALS,FLIPFLOPS,FOOTBALL
 
 	}

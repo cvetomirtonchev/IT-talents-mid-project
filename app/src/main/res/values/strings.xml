@@ -20,5 +20,6 @@
     <string name="lady">LADIES</string>
     <string name="title_activity_registration">RegistrationActivity</string>
     <string name="accesories">Accesories</string>
+    <string name="products_act">Products</string>
 
 </resources>
