@@ -24,7 +24,7 @@ public class ProductsActivity extends AppCompatActivity {
     private RadioGroup brand;
     private RadioGroup size;
     private RadioGroup price;
-
+    private ArrayList<Product> displayed;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class ProductsActivity extends AppCompatActivity {
         gender = (Product.Gender) getIntent().getSerializableExtra("gender");
         productType = (Product.ProductType) getIntent().getSerializableExtra("productType");
         specProd = (Enum) getIntent().getSerializableExtra("specType");
+
+        displayed = new ArrayList<Product>(MainActivity.store.getCatalog().get(gender).get(productType).get(specProd));
 
         color = (RadioGroup) findViewById(R.id.color_radio);
         brand = (RadioGroup) findViewById(R.id.brand_radio);
@@ -69,10 +71,8 @@ public class ProductsActivity extends AppCompatActivity {
         brand.check(R.id.rad_brand_all);
         size.check(R.id.rad_size_all);
         price.check(R.id.rad_price_all);
-
+        // display made selection without sorting
         if (!MainActivity.store.getCatalog().isEmpty()) {
-
-            ArrayList<Product> displayed  = new ArrayList<Product>(MainActivity.store.getCatalog().get(gender).get(productType).get(specProd));
             for (Product p : displayed) {
                 LinearLayout lL = (LinearLayout) findViewById(R.id.product_layout);
                 ImageView iv = new ImageView(this);
@@ -90,14 +90,12 @@ public class ProductsActivity extends AppCompatActivity {
                         break;
                 }
                 TextView name = new TextView(this);
-                name.setText(p.getBrand() + " " + p.getName() + " " +p.getGender() + " " + p.getProductType() + " " + p.getStock() + " " + p.getQuantity());
+                name.setText(p.getBrand() + " " + p.getName() + " " +p.getGender() + " " + p.getProductType() + " " + p.getStock() + " " + p.getColor() + " " + p.getSize());
                 name.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
                 TextView price = new TextView(this);
                 price.setText(p.getPrice() + " lv.");
                 price.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-
-
                 lL.addView(iv);
                 lL.addView(name);
                 lL.addView(price);
@@ -106,4 +104,11 @@ public class ProductsActivity extends AppCompatActivity {
         }
 
     }
+    // check each radiogroup for pressed button -> set visibility to GONE for each of the non-selected
+//    private void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
+//        RadioButton col = (RadioButton) findViewById(color.getCheckedRadioButtonId());
+//        for (Product p : displayed) {
+//            if (p.getColor().equals(col.getText()))
+//        }
+//    }
 }
