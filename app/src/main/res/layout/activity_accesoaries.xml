@@ -46,6 +46,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/acc_watches"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -53,14 +54,16 @@
             android:text="Whatches"
             android:textColor="@color/White"
             android:textSize="25sp"/>/>
+
         <Button
+            android:id="@+id/acc_belts"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/belts"
             android:text="Belts"
             android:textColor="@color/White"
-            android:textSize="25sp"/>/>
+            android:textSize="25sp" />/>
 
     </LinearLayout>
     <LinearLayout
@@ -70,7 +73,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/acc_hats"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -80,6 +83,7 @@
             android:textSize="25sp"/>
 
         <Button
+            android:id="@+id/acc_glasses"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

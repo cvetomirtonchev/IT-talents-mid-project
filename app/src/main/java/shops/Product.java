@@ -19,7 +19,7 @@ public abstract class Product  {
 	}
 	public static String[] menFootSizes = {"39", "40", "41", "42", "43", "44", "45", "46"};
 	public static String[] menClothSizes = {"S", "M", "L", "XL", "XXL"};
-	public static String[] accessSizes = {"S", "M", "L"};
+	public static String[] accessSizes = {"XS", "S", "M", "L"};
 
 	private String name;
 	private Brand brand;

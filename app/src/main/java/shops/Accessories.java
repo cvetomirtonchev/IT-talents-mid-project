@@ -1,15 +1,11 @@
 package shops;
 
-import java.util.TreeMap;
-import java.util.Map.Entry;
-import java.util.Random;
+import java.io.Serializable;
 
-import shops.Product.Gender;
-import shops.Product.ProductType;
 import store.IStock;
 
 public class Accessories extends shops.Product {
-	public enum AccessType implements IStock{
+	public enum AccessType implements IStock, Serializable{
 		BELTS,GLASSES,WATCHES,HATS
 	}
 	private AccessType accessType;

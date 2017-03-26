@@ -18,7 +18,7 @@ public class MenActivity extends AppCompatActivity {
         accesoires.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenActivity.this , Accesoaries.class);
+                Intent intent = new Intent(MenActivity.this , AccessoriesActivity.class);
                 MenActivity.this.startActivity(intent);
             }
         });

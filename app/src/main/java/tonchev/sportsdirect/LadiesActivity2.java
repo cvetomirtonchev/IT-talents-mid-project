@@ -38,7 +38,7 @@ public class LadiesActivity2 extends AppCompatActivity {
         accesories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LadiesActivity2.this, Accesoaries.class);
+                Intent intent = new Intent(LadiesActivity2.this, AccessoriesActivity.class);
                 LadiesActivity2.this.startActivity(intent);
             }
         });

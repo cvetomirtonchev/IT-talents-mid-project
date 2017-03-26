@@ -53,7 +53,7 @@ public class ProductsActivity extends AppCompatActivity {
                     RadioGroup radioGroup3 = (RadioGroup) findViewById(R.id.size_radio);
                     for (int i = 0; i < Product.accessSizes.length; i++) {
                         RadioButton rb = new RadioButton(this);
-                        rb.setText(Product.menClothSizes[i]);
+                        rb.setText(Product.accessSizes[i]);
                         radioGroup3.addView(rb);
                     }
                     break;
