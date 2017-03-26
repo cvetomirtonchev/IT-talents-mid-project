@@ -82,37 +82,23 @@ public abstract class Product  {
 				", size " + size + ", quantity "+ quantity;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
 
-	
-	
+		Product product = (Product) o;
+
+		return Double.compare(product.price, price) == 0;
+
+	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((brand == null) ? 0 : brand.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
+		long temp = Double.doubleToLongBits(price);
+		return (int) (temp ^ (temp >>> 32));
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Product other = (Product) obj;
-		if (brand != other.brand)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
-	}
 	public String getSize() {
 		return size;
 	}

@@ -195,9 +195,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/product_layout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp"
                 android:layout_weight="3">
+
+
+
+
+
             </LinearLayout>
 
         </LinearLayout>

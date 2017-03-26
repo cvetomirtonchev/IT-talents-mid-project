@@ -9,7 +9,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Random;
 
+import shops.Accessories;
+import shops.Clothing;
+import shops.FootWear;
+import shops.Product;
 import store.Store;
 import users.User;
 
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     static {
         store = new Store("Sofia");
+        //add some users
         User pesho;
         User gosho;
         User atanas;
@@ -42,6 +48,29 @@ public class MainActivity extends AppCompatActivity {
         } catch (User.InvalidPasswordException e) {
             e.printStackTrace();
 
+        }
+        //add some products
+        String [] colors = {"Green", "Red", "Blue", "Black", "White", "Yellow"};
+        int col = colors.length;
+        for (int i = 0; i < 1000; i++) {
+            Random r = new Random();
+            int type = r.nextInt(3);
+            if (type == 0) {
+                int sizeL = Product.menFootSizes.length;
+                store.addToCatalog(new FootWear("Air", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +45, "Leather",
+                        FootWear.ShoesType.values()[r.nextInt(FootWear.ShoesType.values().length)], colors[r.nextInt(col)], Product.menFootSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+
+            }
+            if (type == 1) {
+                int sizeL = Product.accessSizes.length;
+                store.addToCatalog(new Accessories("Mile", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],  Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +15, "Cool",
+                        Accessories.AccessType.values()[r.nextInt(Accessories.AccessType.values().length)], colors[r.nextInt(col)], Product.accessSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+            }
+            if (type == 2) {
+                int sizeL = Product.menClothSizes.length;
+                store.addToCatalog(new Clothing("Stone", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],  Product.Gender.values()[r.nextInt(Product.Gender.values().length)],  r.nextDouble()*100 +15, "Velur",
+                        Clothing.ClothType.values()[r.nextInt(Clothing.ClothType.values().length)], colors[r.nextInt(col)], Product.menClothSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+            }
         }
     }
     @Override
