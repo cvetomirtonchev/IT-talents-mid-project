@@ -7,12 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import models.ProductAdapter;
+import shops.FootWear;
 import shops.Product;
 
 public class ProductsActivity extends AppCompatActivity {
@@ -25,6 +28,7 @@ public class ProductsActivity extends AppCompatActivity {
     private RadioGroup size;
     private RadioGroup price;
     private ArrayList<Product> displayed;
+    private ListView listView;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +40,15 @@ public class ProductsActivity extends AppCompatActivity {
         specProd = (Enum) getIntent().getSerializableExtra("specType");
 
         displayed = new ArrayList<Product>(MainActivity.store.getCatalog().get(gender).get(productType).get(specProd));
+        displayed.add(new FootWear("Nike Air", Product.Brand.ADIDAS,R.drawable.football, Product.Gender.LADIES,12.23,"adasd", FootWear.ShoesType.FOOTBALL,"Black","41",4));
+        displayed.add(new FootWear("Nike Air", Product.Brand.ADIDAS,R.drawable.football, Product.Gender.LADIES,12.23,"adasd", FootWear.ShoesType.FOOTBALL,"Black","41",4));
+        displayed.add(new FootWear("Nike Air", Product.Brand.ADIDAS,R.drawable.football, Product.Gender.LADIES,12.23,"adasd", FootWear.ShoesType.FOOTBALL,"Black","41",4));
 
         color = (RadioGroup) findViewById(R.id.color_radio);
         brand = (RadioGroup) findViewById(R.id.brand_radio);
         size = (RadioGroup) findViewById(R.id.size_radio);
         price = (RadioGroup) findViewById(R.id.price_radio);
+        listView = (ListView) findViewById(R.id.product_list);
 
         if (gender == Product.Gender.MEN) {
             switch (productType) {
@@ -67,48 +75,42 @@ public class ProductsActivity extends AppCompatActivity {
                     break;
             }
         }
+        else{
+            switch (productType){
+                case FOOTWEAR:
+                    for (int i = 0; i < Product.ladiesFootsizes.length; i++) {
+                        RadioButton rb = new RadioButton(this);
+                        rb.setText(Product.ladiesFootsizes[i]);
+                        size.addView(rb);
+                    }
+                    break;
+                case CLOTHING:
+                    for (int i = 0; i < Product.ladiesClothSizes.length; i++) {
+                        RadioButton rb = new RadioButton(this);
+                        rb.setText(Product.ladiesClothSizes[i]);
+                        size.addView(rb);
+                    }
+                    break;
+                case ACCESSORIES:
+                    for (int i = 0; i < Product.accessSizes.length; i++) {
+                        RadioButton rb = new RadioButton(this);
+                        rb.setText(Product.accessSizes[i]);
+                        size.addView(rb);
+                    }
+                    break;
+
+            }
+        }
         color.check(R.id.rad_color_all);
         brand.check(R.id.rad_brand_all);
         size.check(R.id.rad_size_all);
         price.check(R.id.rad_price_all);
-        // display made selection without sorting
-        if (!MainActivity.store.getCatalog().isEmpty()) {
-            for (Product p : displayed) {
-                LinearLayout lL = (LinearLayout) findViewById(R.id.product_layout);
-                ImageView iv = new ImageView(this);
-                switch (productType) {
-                    case FOOTWEAR:
-                        iv.setMaxWidth(50);
-                        iv.setMaxHeight(50);
-                        iv.setImageResource(R.drawable.football);
-                        break;
-                    case CLOTHING:
-                        iv.setImageResource(R.drawable.tshirt);
-                        break;
-                    case ACCESSORIES:
-                        iv.setImageResource(R.drawable.watches);
-                        break;
-                }
-                TextView name = new TextView(this);
-                name.setText(p.getBrand() + " " + p.getName() + " " +p.getGender() + " " + p.getProductType() + " " + p.getStock() + " " + p.getColor() + " " + p.getSize());
-                name.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
-                TextView price = new TextView(this);
-                price.setText(p.getPrice() + " lv.");
-                price.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                lL.addView(iv);
-                lL.addView(name);
-                lL.addView(price);
-            }
+        ProductAdapter adapter = new ProductAdapter(this,displayed);
+        listView.setAdapter(adapter);
 
-        }
+
 
     }
-    // check each radiogroup for pressed button -> set visibility to GONE for each of the non-selected
-//    private void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
-//        RadioButton col = (RadioButton) findViewById(color.getCheckedRadioButtonId());
-//        for (Product p : displayed) {
-//            if (p.getColor().equals(col.getText()))
-//        }
-//    }
+
 }

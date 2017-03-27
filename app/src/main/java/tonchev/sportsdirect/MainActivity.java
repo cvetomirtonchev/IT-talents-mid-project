@@ -57,18 +57,18 @@ public class MainActivity extends AppCompatActivity {
             int type = r.nextInt(3);
             if (type == 0) {
                 int sizeL = Product.menFootSizes.length;
-                store.addToCatalog(new FootWear("Air", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +45, "Leather",
+                store.addToCatalog(new FootWear("Air", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],R.drawable.football, Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +45, "Leather",
                         FootWear.ShoesType.values()[r.nextInt(FootWear.ShoesType.values().length)], colors[r.nextInt(col)], Product.menFootSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
 
             }
             if (type == 1) {
                 int sizeL = Product.accessSizes.length;
-                store.addToCatalog(new Accessories("Mile", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],  Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +15, "Cool",
+                store.addToCatalog(new Accessories("Mile", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],R.drawable.football,  Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +15, "Cool",
                         Accessories.AccessType.values()[r.nextInt(Accessories.AccessType.values().length)], colors[r.nextInt(col)], Product.accessSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
             }
             if (type == 2) {
                 int sizeL = Product.menClothSizes.length;
-                store.addToCatalog(new Clothing("Stone", Product.Brand.values()[r.nextInt(Product.Brand.values().length)],  Product.Gender.values()[r.nextInt(Product.Gender.values().length)],  r.nextDouble()*100 +15, "Velur",
+                store.addToCatalog(new Clothing("Stone", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], R.drawable.football, Product.Gender.values()[r.nextInt(Product.Gender.values().length)],  r.nextDouble()*100 +15, "Velur",
                         Clothing.ClothType.values()[r.nextInt(Clothing.ClothType.values().length)], colors[r.nextInt(col)], Product.menClothSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
             }
         }

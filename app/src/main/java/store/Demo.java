@@ -41,24 +41,6 @@ public class Demo {
 		
 		ArrayList<Product> products = new ArrayList<>();
 
-		for (int i = 0; i < 100; i++) {
-			Random r = new Random();
-			int type = r.nextInt(3);
-			if (type == 0) {
-				store.addToCatalog(new FootWear("Air", Brand.values()[r.nextInt(Brand.values().length)], Gender.values()[r.nextInt(Gender.values().length)], r.nextDouble()*100 +45, "Leather",
-						ShoesType.values()[r.nextInt(ShoesType.values().length)], colors[r.nextInt(col)], size[r.nextInt(sizeL)], r.nextInt(5)+1));
-			
-			}
-			if (type == 1) {
-				store.addToCatalog(new Accessories("Mile", Brand.values()[r.nextInt(Brand.values().length)],  Gender.values()[r.nextInt(Gender.values().length)], r.nextDouble()*100 +15, "Cool",
-						AccessType.values()[r.nextInt(AccessType.values().length)], colors[r.nextInt(col)], size[r.nextInt(sizeL)], r.nextInt(5)+1));
-			}
-			if (type == 2) {
-				store.addToCatalog(new Clothing("Stone", Brand.values()[r.nextInt(Brand.values().length)],  Gender.values()[r.nextInt(Gender.values().length)],  r.nextDouble()*100 +15, "Velur",
-						ClothType.values()[r.nextInt(ClothType.values().length)], colors[r.nextInt(col)], size[r.nextInt(sizeL)], r.nextInt(5)+1));
-			
-			}
-		}
 		for (Entry<Gender, HashMap<ProductType, HashMap<IStock, HashSet<Product>>>> e : store.getCatalog().entrySet()) {
 			for (Entry<ProductType, HashMap<IStock, HashSet<Product>>> e1 : e.getValue().entrySet()) {
 				for (Entry<IStock, HashSet<Product>> e2 : e1.getValue().entrySet()) {
@@ -69,13 +51,12 @@ public class Demo {
 			}
 		}
 		
-		Product nov = new Clothing("OPITEN", Brand.EVERLAST, Gender.MEN, 1500, "RABOTI LI", ClothType.JACKETS, "BLACK", "XL", 10);
-		store.addToCatalog(nov);
-		gosho.addToBag(nov, 4);
+
+
 		System.out.println("Bag of Gosho before removal:");
 		gosho.printUserBag();
 		System.out.println("==========");
-		gosho.returnProduct(nov);
+
 		System.out.println("Bag of Gosho after removal:");
 		gosho.printUserBag();
 		System.out.println();

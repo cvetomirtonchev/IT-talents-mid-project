@@ -46,6 +46,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/ladies_tshirt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -54,6 +55,7 @@
             android:textColor="@color/Black"
             android:textSize="20sp"/>/>
         <Button
+            android:id="@+id/ladies_jeans"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -70,7 +72,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/ladies_jackets"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -80,6 +82,7 @@
             android:textSize="20sp"/>
 
         <Button
+            android:id="@+id/ladies_swimwear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -95,6 +98,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/ladies_hoodies"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ladieshoodies"

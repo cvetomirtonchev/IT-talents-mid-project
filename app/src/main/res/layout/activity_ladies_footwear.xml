@@ -46,6 +46,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/ladies_football"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -54,6 +55,7 @@
             android:textColor="@color/Black"
             android:textSize="20sp"/>/>
         <Button
+            android:id="@+id/ladies_flipflops"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -70,7 +72,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/ladies_sandals"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -80,6 +82,7 @@
             android:textSize="20sp"/>
 
         <Button
+            android:id="@+id/ladies_running"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -95,6 +98,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/ladies_boots"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ladiesboots"
