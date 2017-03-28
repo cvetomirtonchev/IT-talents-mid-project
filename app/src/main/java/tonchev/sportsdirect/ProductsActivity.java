@@ -3,10 +3,12 @@ package tonchev.sportsdirect;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -28,6 +30,7 @@ public class ProductsActivity extends AppCompatActivity {
     private RadioGroup price;
     private ArrayList<Product> displayed;
     private ListView listView;
+    private Button sort;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +100,7 @@ public class ProductsActivity extends AppCompatActivity {
 
             }
         }
-        color.check(R.id.rad_color_all);
+       color.check(R.id.rad_color_all);
         brand.check(R.id.rad_brand_all);
         size.check(R.id.rad_size_all);
         price.check(R.id.rad_price_all);
@@ -117,7 +120,19 @@ public class ProductsActivity extends AppCompatActivity {
 
 
 
-            });}
+            });
+        sort = (Button) findViewById(R.id.sort_button);
+        sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sort(color, brand, size, price);
+            }
+        });
+
+
+
+
+    }
 
 
     public void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
@@ -129,15 +144,14 @@ public class ProductsActivity extends AppCompatActivity {
             Product p = displayed.get(i);
             if (!p.getColor().equals(col.getText())) {
                 listView.getChildAt(i).setVisibility(View.GONE);
-                continue;
+
             }
             if (!p.getBrand().toString().equals(br.getText())){
                 listView.getChildAt(i).setVisibility(View.GONE);
-                continue;
             }
             if (!p.getSize().equals(sz.getText())) {
                 listView.getChildAt(i).setVisibility(View.GONE);
-                continue;
+
             }
             switch (pr.getId()) {
                 case R.id.zero_thirty:
@@ -172,5 +186,6 @@ public class ProductsActivity extends AppCompatActivity {
             Toast.makeText(this, "Bag empty. Please add some products first!", Toast.LENGTH_SHORT).show();
         }
     }
+
 
 }
