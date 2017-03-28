@@ -109,18 +109,21 @@
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_color_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Black"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_color_white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="White"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_color_other"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Other"
@@ -147,24 +150,28 @@
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_brand_nike"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nike"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_brand_adidas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Adidas"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_brand_puma"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Puma"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/rad_brand_everlast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Everlast"
@@ -212,18 +219,21 @@
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/zero_thirty"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0-30"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/thirty_fifty"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="30-50"
                         android:textSize="16sp" />
 
                     <RadioButton
+                        android:id="@+id/fifty_plus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="50-~"
@@ -233,7 +243,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sort" />
+                    android:text="sort" />
 
 
             </LinearLayout>

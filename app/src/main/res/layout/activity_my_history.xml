@@ -78,13 +78,14 @@
         <ListView
             android:id="@+id/purchased_products"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_layout">
+        </ListView>
         <LinearLayout
             android:id="@+id/back_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/purchased_products">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/back_selection"

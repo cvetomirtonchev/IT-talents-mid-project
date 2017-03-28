@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 300; i++) {
             Random r = new Random();
             int type = r.nextInt(3);
             if (type == 0) {

@@ -44,9 +44,12 @@ public class MyShoppingBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 for (Product p : MainActivity.loggedUser.getShoppingBag()) {
                     MainActivity.loggedUser.getBoughtProducts().add(p);
+                    MainActivity.store.removeFromCatalog(p);
                 }
                 MainActivity.loggedUser.getShoppingBag().clear();
+
                 Toast.makeText(MyShoppingBagActivity.this, "You have successfully finished your order", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(MyShoppingBagActivity.this, SelectionActivity.class);
                 startActivity(intent);
             }

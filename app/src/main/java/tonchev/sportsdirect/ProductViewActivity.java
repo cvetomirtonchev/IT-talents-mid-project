@@ -1,12 +1,12 @@
 package tonchev.sportsdirect;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import shops.Product;
@@ -35,7 +35,6 @@ public class ProductViewActivity extends AppCompatActivity {
         size = (RadioButton) findViewById(R.id.product_size_view);
         addToBag = (Button) findViewById(R.id.product_add_to_bag);
 
-
         color.setChecked(true);
         size.setChecked(true);
         image.setImageResource(product.getImageId());
@@ -49,10 +48,20 @@ public class ProductViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 MainActivity.loggedUser.getShoppingBag().add(product);
+                Intent intent = new Intent(ProductViewActivity.this, MyShoppingBagActivity.class);
+                startActivity(intent);
             }
         });
 
+    }
 
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(ProductViewActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
 
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(ProductViewActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
     }
 }

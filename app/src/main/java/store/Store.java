@@ -176,14 +176,8 @@ public class Store {
 
 
 	public void removeFromCatalog(Product prod) {
-		HashSet<Product> temp = this.catalog.get(prod.getGender()).get(prod.getProductType()).get(prod.getStock());
-		for (Product p : temp) {
-			if (p == prod) {
-				p.setQuantity(p.getQuantity() - 1);
-				break;
-			}
-		}
-	}
+				this.catalog.get(prod.getGender()).get(prod.getProductType()).get(prod.getStock()).remove(prod);
+    }
 
 	public void giveProduct(User user, Product product, int quantity) {
 		Gender gen = product.getGender();

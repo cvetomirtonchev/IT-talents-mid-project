@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -122,13 +119,45 @@ public class ProductsActivity extends AppCompatActivity {
 
             });}
 
-    // check each radiogroup for pressed button -> set visibility to GONE for each of the non-selected
-//    private void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
-//        RadioButton col = (RadioButton) findViewById(color.getCheckedRadioButtonId());
-//        for (Product p : displayed) {
-//            if (p.getColor().equals(col.getText()))
-//        }
-//    }
+
+    public void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
+        RadioButton col = (RadioButton) findViewById(color.getCheckedRadioButtonId());
+        RadioButton br = (RadioButton) findViewById(brand.getCheckedRadioButtonId());
+        RadioButton sz = (RadioButton) findViewById(size.getCheckedRadioButtonId());
+        RadioButton pr = (RadioButton) findViewById(price.getCheckedRadioButtonId());
+        for (int i = 0; i < displayed.size(); i++) {
+            Product p = displayed.get(i);
+            if (!p.getColor().equals(col.getText())) {
+                listView.getChildAt(i).setVisibility(View.GONE);
+                continue;
+            }
+            if (!p.getBrand().toString().equals(br.getText())){
+                listView.getChildAt(i).setVisibility(View.GONE);
+                continue;
+            }
+            if (!p.getSize().equals(sz.getText())) {
+                listView.getChildAt(i).setVisibility(View.GONE);
+                continue;
+            }
+            switch (pr.getId()) {
+                case R.id.zero_thirty:
+                    if(p.getPrice()>30){
+                        listView.getChildAt(i).setVisibility(View.GONE);
+                        break;
+                    }
+                case R.id.thirty_fifty:
+                    if(p.getPrice()<=30 || p.getPrice()>50) {
+                        listView.getChildAt(i).setVisibility(View.GONE);
+                        break;
+                    }
+                case R.id.fifty_plus:
+                    if(p.getPrice()<=50){
+                        listView.getChildAt(i).setVisibility(View.GONE);
+                        break;
+                    }
+            }
+        }
+    }
     public void callMyHistory(View view) {
         Intent intent = new Intent(ProductsActivity.this, MyHistoryActivity.class);
         startActivity(intent);
