@@ -13,8 +13,7 @@ public class FootWear extends Product {
 	}
 	
 	private ShoesType shoesType;
-	
-	
+
 	public FootWear(String name, Brand brand, Gender gender, double price , String productInfo,	ShoesType shoesType, String color, String size, int quantity) {
 		super(name, brand, gender,price, productInfo, color, size, quantity, R.drawable.run1 );
 		this.shoesType = shoesType;

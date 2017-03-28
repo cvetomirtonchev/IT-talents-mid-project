@@ -82,17 +82,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sort by color:"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
+
                 <RadioGroup
                     android:id="@+id/color_radio"
                     android:layout_width="wrap_content"
@@ -104,29 +106,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Black"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="White"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Other"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sort by brand:"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
+
                 <RadioGroup
                     android:id="@+id/brand_radio"
                     android:layout_width="wrap_content"
@@ -138,53 +144,61 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nike"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Adidas"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Puma"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Everlast"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sort by size:"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
+
                 <RadioGroup
                     android:id="@+id/size_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <RadioButton
                         android:id="@+id/rad_size_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
 
 
                 </RadioGroup>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sort by price:"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
+
                 <RadioGroup
                     android:id="@+id/price_radio"
                     android:layout_width="wrap_content"
@@ -195,45 +209,43 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0-30"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="30-50"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="50-~"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </RadioGroup>
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sort"/>
+                    android:text="Sort" />
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/product_layout"
+            <ListView
+                android:id="@+id/product_list"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
                 android:layout_weight="3">
 
 
-
-
-
-            </LinearLayout>
+            </ListView>
 
         </LinearLayout>
 

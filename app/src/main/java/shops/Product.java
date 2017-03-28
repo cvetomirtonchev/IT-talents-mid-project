@@ -20,6 +20,11 @@ public abstract class Product  {
 	public static String[] menFootSizes = {"39", "40", "41", "42", "43", "44", "45", "46"};
 	public static String[] menClothSizes = {"S", "M", "L", "XL", "XXL"};
 	public static String[] accessSizes = {"XS", "S", "M", "L"};
+	public static String[] ladiesFootsizes ={"35", "36", "37", "38", "39", "40", "41", "42"};
+	public static String[] ladiesClothSizes = {"XS", "S", "M", "L", "XL"};
+
+
+
 
 	private String name;
 	private Brand brand;
@@ -28,7 +33,7 @@ public abstract class Product  {
 	private String productInfo;
 	private String color;
 	private String size;
-	private int quantity;
+    private int quantity;
 	private int imageId;
 	protected ProductType productType;
 	protected IStock stock;
@@ -43,6 +48,7 @@ public abstract class Product  {
 		this.color = color;
 		this.size = size;
 		this.quantity = quantity;
+        this.imageId = img;
 	}
 	
 	public Gender getGender() {
@@ -76,6 +82,8 @@ public abstract class Product  {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+
 
 	@Override
 	public String toString() {
