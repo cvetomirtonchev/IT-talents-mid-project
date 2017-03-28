@@ -26,7 +26,8 @@
         <activity android:name=".AccessoriesActivity" />
         <activity android:name=".ProductsActivity" />
         <activity android:name=".MyHistoryActivity" />
-        <activity android:name=".MyShoppingBagActivity"></activity>
+        <activity android:name=".MyShoppingBagActivity" />
+        <activity android:name=".ProductViewActivity"></activity>
     </application>
 
 </manifest>

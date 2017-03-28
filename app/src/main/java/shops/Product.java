@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import store.IStock;
 
-public abstract class Product  {
+public abstract class Product implements Serializable {
 
 	public enum Brand implements Serializable {
 		NIKE, ADIDAS, PUMA, EVERLAST
@@ -83,7 +83,9 @@ public abstract class Product  {
 		this.quantity = quantity;
 	}
 
-
+	public String getProductInfo() {
+		return productInfo;
+	}
 
 	@Override
 	public String toString() {
