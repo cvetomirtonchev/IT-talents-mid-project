@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import shops.Accessories;
 import shops.Product;
@@ -73,7 +74,12 @@ public class AccessoriesActivity extends AppCompatActivity {
     }
 
     public void callShoppingBag(View view) {
-        Intent intent = new Intent(AccessoriesActivity.this, MyShoppingBagActivity.class);
-        startActivity(intent);
+        if (!MainActivity.loggedUser.getShoppingBag().isEmpty()) {
+            Intent intent = new Intent(AccessoriesActivity.this, MyShoppingBagActivity.class);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this, "Bag empty. Please add some products first!", Toast.LENGTH_SHORT).show();
+        }
     }
 }

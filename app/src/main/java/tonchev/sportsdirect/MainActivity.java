@@ -53,24 +53,27 @@ public class MainActivity extends AppCompatActivity {
         //add some products
         String [] colors = {"Green", "Red", "Blue", "Black", "White", "Yellow"};
         int col = colors.length;
-        for (int i = 0; i < 1000; i++) {
+
+
+
+        for (int i = 0; i < 100; i++) {
             Random r = new Random();
             int type = r.nextInt(3);
             if (type == 0) {
                 int sizeL = Product.menFootSizes.length;
                 store.addToCatalog(new FootWear("Air", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +45, "Leather",
-                        FootWear.ShoesType.values()[r.nextInt(FootWear.ShoesType.values().length)], colors[r.nextInt(col)], Product.menFootSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+                        FootWear.ShoesType.values()[r.nextInt(FootWear.ShoesType.values().length)], colors[r.nextInt(col)], Product.menFootSizes[r.nextInt(sizeL)], 1));
 
             }
             if (type == 1) {
                 int sizeL = Product.accessSizes.length;
                 store.addToCatalog(new Accessories("Mile", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], Product.Gender.values()[r.nextInt(Product.Gender.values().length)], r.nextDouble()*100 +15, "Cool",
-                        Accessories.AccessType.values()[r.nextInt(Accessories.AccessType.values().length)], colors[r.nextInt(col)], Product.accessSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+                        Accessories.AccessType.values()[r.nextInt(Accessories.AccessType.values().length)], colors[r.nextInt(col)], Product.accessSizes[r.nextInt(sizeL)], 1));
             }
             if (type == 2) {
                 int sizeL = Product.menClothSizes.length;
                 store.addToCatalog(new Clothing("Stone", Product.Brand.values()[r.nextInt(Product.Brand.values().length)], Product.Gender.values()[r.nextInt(Product.Gender.values().length)],  r.nextDouble()*100 +15, "Velur",
-                        Clothing.ClothType.values()[r.nextInt(Clothing.ClothType.values().length)], colors[r.nextInt(col)], Product.menClothSizes[r.nextInt(sizeL)], r.nextInt(5)+1));
+                        Clothing.ClothType.values()[r.nextInt(Clothing.ClothType.values().length)], colors[r.nextInt(col)], Product.menClothSizes[r.nextInt(sizeL)], 1));
             }
         }
     }
@@ -82,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         registerButton = (Button) findViewById(R.id.register) ;
         username = (EditText) findViewById(R.id.loginusername);
         password = (EditText) findViewById(R.id.password);
-
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override

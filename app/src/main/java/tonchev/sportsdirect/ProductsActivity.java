@@ -6,17 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import models.ProductAdapter;
-import shops.FootWear;
 import shops.Product;
 
 public class ProductsActivity extends AppCompatActivity {
@@ -123,8 +120,13 @@ public class ProductsActivity extends AppCompatActivity {
     }
 
     public void callShoppingBag(View view) {
-        Intent intent = new Intent(ProductsActivity.this, MyShoppingBagActivity.class);
-        startActivity(intent);
+        if (!MainActivity.loggedUser.getShoppingBag().isEmpty()) {
+            Intent intent = new Intent(ProductsActivity.this, MyShoppingBagActivity.class);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this, "Bag empty. Please add some products first!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

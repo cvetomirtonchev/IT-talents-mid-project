@@ -1,4 +1,4 @@
-package tonchev.sportsdirect;
+package models;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import shops.Product;
+import tonchev.sportsdirect.R;
 
 /**
  * Created by Vasko on 28.3.2017.
