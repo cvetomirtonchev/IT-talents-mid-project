@@ -78,4 +78,14 @@ public class MenFootwearActivity extends AppCompatActivity {
         running.setOnClickListener(takeMeToProd);
         boots.setOnClickListener(takeMeToProd);
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(MenFootwearActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(MenFootwearActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

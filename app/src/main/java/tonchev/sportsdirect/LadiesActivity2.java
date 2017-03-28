@@ -45,4 +45,14 @@ public class LadiesActivity2 extends AppCompatActivity {
 
 
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(LadiesActivity2.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(LadiesActivity2.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

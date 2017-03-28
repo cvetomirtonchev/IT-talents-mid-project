@@ -28,4 +28,14 @@ public class SelectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MenActivity.class);
         startActivity(intent);
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(SelectionActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(SelectionActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

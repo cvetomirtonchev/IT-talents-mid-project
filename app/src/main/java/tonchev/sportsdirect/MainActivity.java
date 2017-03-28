@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     public static Store store;
     public static ArrayList<User> potrebiteli = new ArrayList<>();
+    public static User loggedUser;
 
     static {
         store = new Store("Sofia");
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     if (user.equals(u.getUsername().toString()) && pass.equals(u.getPassword().toString())) {
                         Toast.makeText(MainActivity.this, "Successful Log-in!", Toast.LENGTH_SHORT).show();
                         inDatabase = true;
+                        loggedUser = u;
                         Intent intent1 = new Intent(MainActivity.this,SelectionActivity.class);
                         MainActivity.this.startActivity(intent1);
                         break;

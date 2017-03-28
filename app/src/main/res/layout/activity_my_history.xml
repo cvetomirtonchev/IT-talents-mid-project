@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="@color/White"
-    tools:context="tonchev.sportsdirect.SelectionActivity">
+    tools:context="tonchev.sportsdirect.MyHistoryActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,50 +63,40 @@
 
     </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:orientation="vertical"
-    android:gravity="center">
-
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/selection"
-        android:textStyle="italic"
-        android:textAllCaps="true"
+        android:text="BOUGHT PRODUCTS"
+        android:textSize="35sp"
         android:textColor="#000000"
-        android:textSize="25sp" />
-
-
-
-</LinearLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="2"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/button6"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/man"
-        android:textSize="35sp"
-        android:onClick="menChoice"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/ladiesButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lady"
-        android:textSize="35sp"
-        />
+        <ListView
+            android:id="@+id/purchased_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/back_layout"></ListView>
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/back_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Back To Selection"/>
 
-</LinearLayout>
+        </LinearLayout>
 
-
+    </RelativeLayout>
 </LinearLayout>

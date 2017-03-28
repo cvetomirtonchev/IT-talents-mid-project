@@ -34,4 +34,14 @@ public class MenActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MenClothingActivity.class);
         startActivity(intent);
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(MenActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(MenActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

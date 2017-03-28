@@ -29,10 +29,11 @@ public abstract class Product  {
 	private String color;
 	private String size;
 	private int quantity;
+	private int imageId;
 	protected ProductType productType;
 	protected IStock stock;
 
-	public Product(String name, Brand brand, Gender gender, double price, String productInfo, String color, String size, int quantity) {
+	public Product(String name, Brand brand, Gender gender, double price, String productInfo, String color, String size, int quantity, int img) {
 
 		this.name = name;
 		this.brand = brand;
@@ -105,7 +106,8 @@ public abstract class Product  {
 	public String getColor() {
 		return color;
 	}
-	
-	
 
+	public int getImageId() {
+		return imageId;
+	}
 }

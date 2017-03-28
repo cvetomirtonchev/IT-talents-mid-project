@@ -73,4 +73,14 @@ public class MenClothingActivity extends AppCompatActivity {
         swimwear.setOnClickListener(takeMeToProd);
         hoodies.setOnClickListener(takeMeToProd);
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(MenClothingActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(MenClothingActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

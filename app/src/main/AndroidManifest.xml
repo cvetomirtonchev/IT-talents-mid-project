@@ -24,7 +24,9 @@
         <activity android:name=".LadiesActivity2" />
         <activity android:name=".LadiesFootwear" />
         <activity android:name=".AccessoriesActivity" />
-        <activity android:name=".ProductsActivity"></activity>
+        <activity android:name=".ProductsActivity" />
+        <activity android:name=".MyHistoryActivity" />
+        <activity android:name=".MyShoppingBagActivity"></activity>
     </application>
 
 </manifest>

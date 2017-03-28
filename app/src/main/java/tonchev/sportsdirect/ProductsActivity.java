@@ -1,5 +1,6 @@
 package tonchev.sportsdirect;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -111,4 +112,13 @@ public class ProductsActivity extends AppCompatActivity {
 //            if (p.getColor().equals(col.getText()))
 //        }
 //    }
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(ProductsActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(ProductsActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

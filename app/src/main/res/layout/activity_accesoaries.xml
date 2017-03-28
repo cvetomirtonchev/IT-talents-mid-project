@@ -12,32 +12,56 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:orientation="vertical"
-        android:gravity="center">
-        <TextView
-
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
             android:layout_height="wrap_content"
-            android:fontFamily="verdana"
-            android:textColorLink="@color/Blue"
-            android:text="SPORTS"
-            android:textSize="25sp"
-            android:id="@+id/sports"
-            android:inputType="textNoSuggestions"
-            />
-        <TextView
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
 
-            android:textColor="@color/Red"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="verdana"
-            android:textColorLink="@color/Red"
-            android:text="DIRECT.com"
-            android:textSize="25sp"
-            android:id="@+id/direct"
-            android:inputType="textNoSuggestions"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="verdana"
+                android:textColorLink="@color/Blue"
+                android:text="SPORTS"
+                android:textSize="24sp"
+                android:id="@+id/sports"
+                />
+
+            <TextView
+
+                android:id="@+id/direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="verdana"
+                android:text="DIRECT.com"
+                android:textColor="@color/Red"
+                android:textColorLink="@color/Red"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/user_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usericon"
+                android:onClick="callMyHistory"/>
+
+            <ImageButton
+                android:id="@+id/shoppingbag_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shoppingbag"
+                android:onClick="callShoppingBag"/>
+        </LinearLayout>
 
     </LinearLayout>
     <LinearLayout

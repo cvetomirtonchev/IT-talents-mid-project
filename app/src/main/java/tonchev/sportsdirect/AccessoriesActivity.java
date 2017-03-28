@@ -66,4 +66,14 @@ public class AccessoriesActivity extends AppCompatActivity {
         glasses.setOnClickListener(takeMeToProd);
         hats.setOnClickListener(takeMeToProd);
     }
+
+    public void callMyHistory(View view) {
+        Intent intent = new Intent(AccessoriesActivity.this, MyHistoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void callShoppingBag(View view) {
+        Intent intent = new Intent(AccessoriesActivity.this, MyShoppingBagActivity.class);
+        startActivity(intent);
+    }
 }

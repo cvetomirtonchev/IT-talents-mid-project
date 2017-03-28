@@ -2,6 +2,7 @@ package users;
 
 import java.util.ArrayList;
 
+import shops.Clothing;
 import shops.Product;
 import store.Store;
 
@@ -69,6 +70,8 @@ public class User {
 			idNumber++;
 			this.boughtProducts = new ArrayList<>();
 			this.shoppingBag = new ArrayList<>();
+			this.shoppingBag.add(new Clothing("Megaten", Product.Brand.NIKE, Product.Gender.LADIES,20.45,"Super qkata teniska", Clothing.ClothType.TSHIRTS, "White","M", 1));
+            this.shoppingBag.add(new Clothing("Dynki", Product.Brand.ADIDAS, Product.Gender.MEN,40.45,"Ultra tynki dynki", Clothing.ClothType.JEANS, "Black","L", 1));
 		}
 	}
 
@@ -176,5 +179,13 @@ public class User {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public ArrayList<Product> getShoppingBag() {
+		return shoppingBag;
+	}
+
+	public ArrayList<Product> getBoughtProducts() {
+		return boughtProducts;
 	}
 }
