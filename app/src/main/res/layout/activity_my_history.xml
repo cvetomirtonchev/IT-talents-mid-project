@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/usericon"
-                android:onClick="callMyHistory"/>
+                android:onClick="callMyHistory" />
 
             <ImageButton
                 android:id="@+id/shoppingbag_button"

@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -104,9 +108,20 @@ public class ProductsActivity extends AppCompatActivity {
         ProductAdapter adapter = new ProductAdapter(this,displayed);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Product product = displayed.get(position);
+
+                Intent intent = new Intent(ProductsActivity.this,ProductViewActivity.class);
+                intent.putExtra("product",product);
+                startActivity(intent);
+            }
 
 
-    }
+
+            });}
+
     // check each radiogroup for pressed button -> set visibility to GONE for each of the non-selected
 //    private void sort (RadioGroup color, RadioGroup brand, RadioGroup size, RadioGroup price) {
 //        RadioButton col = (RadioButton) findViewById(color.getCheckedRadioButtonId());
